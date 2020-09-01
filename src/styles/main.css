@@ -1,0 +1,173 @@
+:root{
+    --verde-escuro: #3D944B;
+    --verde-medio: #73E085;
+    --verde-claro: #9CFFAC;
+    --vinho-escuro: #942E43;
+    --vinho-claro: #E07289;
+    --branco: #fefefe;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: var(--branco);
+}
+
+.header{
+    background: var(--vinho-claro);
+    color: var(--branco);
+
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1em;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header a{
+    text-decoration: none;
+    color: var(--branco);
+
+    transition: .2s color ease;
+}
+
+.header a:hover{
+    color: var(--vinho-escuro);
+    text-decoration: underline;
+}
+
+
+
+.header-tic-tac-toe{
+    display: flex;
+    justify-content: center;
+
+    padding-top: 2em;
+
+    width: 100%;
+}
+
+.tic-tac-toe{
+    font-size: 4em;
+    font-weight: 300;
+
+    padding-left: 5px;
+    margin-bottom: .5em;
+
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.grid-flex{
+    display: flex;
+    justify-content: center;
+}
+
+.grid{
+    margin: 0 auto;
+    margin-bottom: 1.5em;
+    display: grid;
+    grid-template-columns:120px 120px 120px;
+    grid-template-rows:120px 120px 120px;
+}
+
+
+
+.c4,
+.c5,
+.c6,
+.c7,
+.c8,
+.c9{
+    border-top: 1px solid black;
+}
+
+.c2,
+.c3,
+.c5,
+.c6,
+.c8,
+.c9{
+    border-left: 1px solid black;
+}
+
+.box{
+    width: 120px;
+    height: 120px;
+}
+
+
+.animate{
+    animation-name: animate;
+    animation-duration: .4s;
+}
+
+@keyframes animate{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+
+
+
+
+.end-page{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.end-page div{
+    display: flex;
+    width: 30vw;
+}
+
+.end-page img{
+    width: 40px;
+    border: 1px solid var(--verde-medio);
+    border-radius: 50%;
+    padding: 5px;
+    margin: 1em 0;
+}
+
+.end-page img:hover{
+    cursor: pointer;
+}
+
+.end-page h2{
+    font-size: 2em;
+    color: var(--branco);
+
+    padding: .3em;
+    border: 2px solid var(--branco);
+}
+
+
+
+
+
+
+@media (max-width: 425px){
+    .tic-tac-toe{
+        font-size: 3em;
+    }
+
+}
